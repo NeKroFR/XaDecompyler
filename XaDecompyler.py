@@ -10,10 +10,8 @@ def decompile(code_list):
         code+=l
     code = code.replace("exec","print")
     code = getoutput(code)
-    print(code)
     code = code.replace(";","\n").replace('exec','print')[2:-2]
     code = getoutput(code)[2:-2]
-    print(code)
     return code
 
 def getoutput(code):
